@@ -8,26 +8,26 @@
 
 import UIKit
 import SnapKit
-let ts_toastControl = TSToastDisplayControl.sharedInstance()
-enum TSToastAnimationStyle : Int{
+public let ts_toastControl = TSToastDisplayControl.sharedInstance()
+public enum TSToastAnimationStyle : Int{
     case fade                 //渐隐渐显
     case upAndDown            //上出下走
     case upDownAndFade  //上下+渐隐
 }
 
-enum TSToastShowStyle : Int {
+public enum TSToastShowStyle : Int {
     case oneByOne   //一个接一个的展示
     case cover      //直接替换当前显示文案
 }
 
 
-class TSToastDisplayControl: NSObject {
+open class TSToastDisplayControl: NSObject {
 
     //动画形式
-    var animationStyle = TSToastAnimationStyle.fade
+    public var animationStyle = TSToastAnimationStyle.fade
     
     //toastView 圆角弧度
-    var tostViewCornerRadius = 4.0 {
+    public var tostViewCornerRadius = 4.0 {
         didSet {
             toastView.layer.cornerRadius = CGFloat(tostViewCornerRadius)
         }
@@ -54,7 +54,7 @@ class TSToastDisplayControl: NSObject {
     /// 默认展示到window上
     ///
     /// - Parameter content: toast 文案
-    func showToast(content: String)  {
+    public func showToast(content: String)  {
         
         if content.count == 0 {
             return
@@ -82,7 +82,7 @@ class TSToastDisplayControl: NSObject {
     /// - Parameters:
     ///   - onSpecificView: 父视图
     ///   - content: toast 文案
-    func showToast(onSpecificView: UIView, content: String)  {
+    public func showToast(onSpecificView: UIView, content: String)  {
         if onSpecificView == nil {
             return
         }
