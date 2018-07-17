@@ -41,7 +41,7 @@ s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSToastView.git",
 
 
 s.source_files  = "TSToastView/TSToast/*.swift"
-s.dependency = 'SnapKit'
+s.dependencies = 'SnapKit'
 #s.frameworks = 'UIKit'
 
 end
