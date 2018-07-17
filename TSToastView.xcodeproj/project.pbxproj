@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511D7FC820FDFA950080036C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 511D7FC620FDFA950080036C /* LICENSE */; };
+		511D7FC920FDFA950080036C /* TSToastView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 511D7FC720FDFA950080036C /* TSToastView.podspec */; };
 		5134CB5A20E4C3A100AB49A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB5920E4C3A100AB49A0 /* AppDelegate.swift */; };
 		5134CB5C20E4C3A100AB49A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB5B20E4C3A100AB49A0 /* ViewController.swift */; };
 		5134CB5F20E4C3A100AB49A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134CB5D20E4C3A100AB49A0 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		36DBF7D7AB96AAD72BAE64EF /* Pods-TSToastView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSToastView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TSToastView/Pods-TSToastView.debug.xcconfig"; sourceTree = "<group>"; };
+		511D7FC620FDFA950080036C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		511D7FC720FDFA950080036C /* TSToastView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSToastView.podspec; sourceTree = "<group>"; };
 		5134CB5620E4C3A100AB49A0 /* TSToastView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSToastView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5134CB5920E4C3A100AB49A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5134CB5B20E4C3A100AB49A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		5134CB4D20E4C3A100AB49A0 = {
 			isa = PBXGroup;
 			children = (
+				511D7FC620FDFA950080036C /* LICENSE */,
+				511D7FC720FDFA950080036C /* TSToastView.podspec */,
 				5134CB5820E4C3A100AB49A0 /* TSToastView */,
 				5134CB6D20E4C3A200AB49A0 /* TSToastViewTests */,
 				5134CB7820E4C3A200AB49A0 /* TSToastViewUITests */,
@@ -268,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5134CB6420E4C3A200AB49A0 /* LaunchScreen.storyboard in Resources */,
+				511D7FC920FDFA950080036C /* TSToastView.podspec in Resources */,
 				5134CB6120E4C3A200AB49A0 /* Assets.xcassets in Resources */,
+				511D7FC820FDFA950080036C /* LICENSE in Resources */,
 				5134CB5F20E4C3A100AB49A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
