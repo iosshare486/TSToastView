@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01EB2531292E947BE7E30554 /* libPods-TSToastView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C3B5FDF8F7BFBCA9E61403 /* libPods-TSToastView.a */; };
 		5134CB5A20E4C3A100AB49A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB5920E4C3A100AB49A0 /* AppDelegate.swift */; };
 		5134CB5C20E4C3A100AB49A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB5B20E4C3A100AB49A0 /* ViewController.swift */; };
 		5134CB5F20E4C3A100AB49A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134CB5D20E4C3A100AB49A0 /* Main.storyboard */; };
@@ -15,6 +14,8 @@
 		5134CB6420E4C3A200AB49A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134CB6220E4C3A200AB49A0 /* LaunchScreen.storyboard */; };
 		5134CB6F20E4C3A200AB49A0 /* TSToastViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB6E20E4C3A200AB49A0 /* TSToastViewTests.swift */; };
 		5134CB7A20E4C3A200AB49A0 /* TSToastViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB7920E4C3A200AB49A0 /* TSToastViewUITests.swift */; };
+		5134CB8B20E4C60F00AB49A0 /* TSToastDisplayControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CB8A20E4C60F00AB49A0 /* TSToastDisplayControl.swift */; };
+		D315AFA7F4AE45D4BF04B24A /* Pods_TSToastView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA0B76B793197245F22835 /* Pods_TSToastView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,8 @@
 		5134CB7520E4C3A200AB49A0 /* TSToastViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSToastViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5134CB7920E4C3A200AB49A0 /* TSToastViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSToastViewUITests.swift; sourceTree = "<group>"; };
 		5134CB7B20E4C3A200AB49A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98C3B5FDF8F7BFBCA9E61403 /* libPods-TSToastView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSToastView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5134CB8A20E4C60F00AB49A0 /* TSToastDisplayControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSToastDisplayControl.swift; sourceTree = "<group>"; };
+		8FCA0B76B793197245F22835 /* Pods_TSToastView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSToastView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2EA6D21FF4E33E6590F30 /* Pods-TSToastView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSToastView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TSToastView/Pods-TSToastView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EB2531292E947BE7E30554 /* libPods-TSToastView.a in Frameworks */,
+				D315AFA7F4AE45D4BF04B24A /* Pods_TSToastView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,7 @@
 		5134CB5820E4C3A100AB49A0 /* TSToastView */ = {
 			isa = PBXGroup;
 			children = (
+				5134CB8720E4C44000AB49A0 /* TSToast */,
 				5134CB5920E4C3A100AB49A0 /* AppDelegate.swift */,
 				5134CB5B20E4C3A100AB49A0 /* ViewController.swift */,
 				5134CB5D20E4C3A100AB49A0 /* Main.storyboard */,
@@ -132,6 +135,14 @@
 			path = TSToastViewUITests;
 			sourceTree = "<group>";
 		};
+		5134CB8720E4C44000AB49A0 /* TSToast */ = {
+			isa = PBXGroup;
+			children = (
+				5134CB8A20E4C60F00AB49A0 /* TSToastDisplayControl.swift */,
+			);
+			path = TSToast;
+			sourceTree = "<group>";
+		};
 		6DA64B2B13EA9EE7EA1049E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +155,7 @@
 		FF7172CE852A5FEFAEE43BB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98C3B5FDF8F7BFBCA9E61403 /* libPods-TSToastView.a */,
+				8FCA0B76B793197245F22835 /* Pods_TSToastView.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,9 +296,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TSToastView/Pods-TSToastView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,6 +350,7 @@
 			files = (
 				5134CB5C20E4C3A100AB49A0 /* ViewController.swift in Sources */,
 				5134CB5A20E4C3A100AB49A0 /* AppDelegate.swift in Sources */,
+				5134CB8B20E4C60F00AB49A0 /* TSToastDisplayControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +527,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -528,7 +547,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -544,7 +567,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -561,7 +588,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -577,7 +608,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -593,7 +628,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSToastViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hongli.TSToastViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
