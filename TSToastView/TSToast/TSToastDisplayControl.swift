@@ -33,6 +33,13 @@ open class TSToastDisplayControl: NSObject {
         }
     }
     
+    //toastView 圆角弧度
+    public var ts_toastBackgroundColor = UIColor.black {
+        didSet {
+            toastView.backgroundColor = ts_toastBackgroundColor
+        }
+    }
+    
     var toastView = UILabel()
     class func sharedInstance() -> TSToastDisplayControl {
         let tsToastControl = TSToastDisplayControl()
@@ -44,7 +51,7 @@ open class TSToastDisplayControl: NSObject {
     func configToastView() {
         toastView.alpha = 0
         toastView.font = UIFont.systemFont(ofSize: 15.0*UIScreen.main.bounds.size.width / 375.0)
-        toastView.backgroundColor = UIColor.init(red: 155.0/255.0, green: 205/255.0, blue: 155/255.0, alpha: 0.8)
+        toastView.backgroundColor = UIColor.init(red: 155.0/255.0, green: 205.0/255.0, blue: 155.0/255.0, alpha: 0.8)
         toastView.textAlignment = .center
         toastView.layer.masksToBounds = true
         toastView.layer.cornerRadius = CGFloat(tostViewCornerRadius)
